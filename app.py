@@ -19,8 +19,8 @@ def is_authorized(req):
 # route for recieving iot data
 @app.route('/webhook', methods=['POST'])
 def home():
-    if not is_authorized(request):
-        return "Unauthorized", 401
+    # if not is_authorized(request):
+    #     return "Unauthorized", 401
     data = request.json
     global latest_login_data
     password_sent = data['data']
